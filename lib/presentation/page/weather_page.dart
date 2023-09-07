@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_tdd_architecture/core/constant/constants.dart';
 import 'package:flutter_tdd_architecture/presentation/bloc/weather_bloc.dart';
 import 'package:flutter_tdd_architecture/presentation/bloc/weather_event.dart';
 import 'package:flutter_tdd_architecture/presentation/bloc/weather_state.dart';
@@ -43,6 +44,28 @@ class WeatherPage extends StatelessWidget {
                   if(state is WeatherLoading){
                     return CircularProgressIndicator();
                   }
+                  if(state is WeatherLoaded){
+                    return Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Image.network(Url.weatherIcon(state.result.iconCode)),
+                        const SizedBox(height: 15,),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(state.result.cityName),
+                            const SizedBox(width: 15,),
+                            Text(state.result.temperature.toString()+'\'C')
+                          ],
+                        )
+                      ],
+                    );
+                  }
+
+                  if(state is WeatherLoadFailure){
+                    return Text(state.message);
+                  }
+
                   return SizedBox();
 
                   // if(state is WeatherLoaded){}

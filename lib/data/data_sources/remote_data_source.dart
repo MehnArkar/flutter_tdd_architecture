@@ -18,7 +18,7 @@ class WeatherRemoteDataSourceImpl extends WeatherRemoteDataSource{
 
   @override
   Future<WeatherModel> getCurrentWeather(String cityName) async{
-    final response = await client.get(Uri.parse(Url.currentWeatherByName('New York')));
+    final response = await client.get(Uri.parse(Url.currentWeatherByName(cityName)));
     if(response.statusCode==200){
         return WeatherModel.fromJson(jsonDecode(response.body));
     }else{
