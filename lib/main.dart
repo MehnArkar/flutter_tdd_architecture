@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_tdd_architecture/injection_container.dart';
-import 'package:flutter_tdd_architecture/presentation/bloc/weather_bloc.dart';
-import 'package:flutter_tdd_architecture/presentation/page/weather_page.dart';
+
+import 'features/presentation/bloc/weather_bloc.dart';
+import 'features/presentation/page/weather_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

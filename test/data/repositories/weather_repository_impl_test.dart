@@ -3,11 +3,10 @@ import 'dart:io';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_tdd_architecture/core/error/exception.dart';
 import 'package:flutter_tdd_architecture/core/error/failure.dart';
-import 'package:flutter_tdd_architecture/data/data_sources/remote_data_source.dart';
-import 'package:flutter_tdd_architecture/data/models/weather_model.dart';
-import 'package:flutter_tdd_architecture/data/repositories/weather_repository_impl.dart';
+import 'package:flutter_tdd_architecture/features/data/models/weather_model.dart';
+import 'package:flutter_tdd_architecture/features/data/repositories/weather_repository_impl.dart';
 import 'package:mockito/mockito.dart';
-import 'package:test/test.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 import '../../helper/test_helper.mocks.dart';
 

@@ -1,6 +1,6 @@
-import 'package:flutter_tdd_architecture/presentation/bloc/weather_event.dart';
-import 'package:flutter_tdd_architecture/presentation/bloc/weather_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_tdd_architecture/features/presentation/bloc/weather_event.dart';
+import 'package:flutter_tdd_architecture/features/presentation/bloc/weather_state.dart';
 import 'package:rxdart/rxdart.dart';
 import '../../domain/usecases/get_current_weather.dart';
 

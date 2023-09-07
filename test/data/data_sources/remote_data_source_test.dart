@@ -1,9 +1,9 @@
 import 'package:flutter_tdd_architecture/core/constant/constants.dart';
 import 'package:flutter_tdd_architecture/core/error/exception.dart';
-import 'package:flutter_tdd_architecture/data/data_sources/remote_data_source.dart';
-import 'package:flutter_tdd_architecture/data/models/weather_model.dart';
+import 'package:flutter_tdd_architecture/features/data/data_sources/remote/remote_data_source.dart';
+import 'package:flutter_tdd_architecture/features/data/models/weather_model.dart';
 import 'package:mockito/mockito.dart';
-import 'package:test/test.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import '../../helper/json_reader.dart';
 import '../../helper/test_helper.mocks.dart';

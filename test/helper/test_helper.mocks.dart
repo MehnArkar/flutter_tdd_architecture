@@ -9,13 +9,15 @@ import 'dart:typed_data' as _i12;
 
 import 'package:dartz/dartz.dart' as _i2;
 import 'package:flutter_tdd_architecture/core/error/failure.dart' as _i7;
-import 'package:flutter_tdd_architecture/data/data_sources/remote_data_source.dart'
+import 'package:flutter_tdd_architecture/features/data/data_sources/remote/remote_data_source.dart'
     as _i9;
-import 'package:flutter_tdd_architecture/data/models/weather_model.dart' as _i4;
-import 'package:flutter_tdd_architecture/domain/entities/weather.dart' as _i8;
-import 'package:flutter_tdd_architecture/domain/repositories/weather_repository.dart'
+import 'package:flutter_tdd_architecture/features/data/models/weather_model.dart'
+    as _i4;
+import 'package:flutter_tdd_architecture/features/domain/entities/weather.dart'
+    as _i8;
+import 'package:flutter_tdd_architecture/features/domain/repositories/weather_repository.dart'
     as _i5;
-import 'package:flutter_tdd_architecture/domain/usecases/get_current_weather.dart'
+import 'package:flutter_tdd_architecture/features/domain/usecases/get_current_weather.dart'
     as _i10;
 import 'package:http/http.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;

@@ -1,10 +1,11 @@
-import 'package:flutter_tdd_architecture/data/data_sources/remote_data_source.dart';
-import 'package:flutter_tdd_architecture/data/repositories/weather_repository_impl.dart';
-import 'package:flutter_tdd_architecture/domain/repositories/weather_repository.dart';
-import 'package:flutter_tdd_architecture/domain/usecases/get_current_weather.dart';
-import 'package:flutter_tdd_architecture/presentation/bloc/weather_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;
+
+import 'features/data/data_sources/remote/remote_data_source.dart';
+import 'features/data/repositories/weather_repository_impl.dart';
+import 'features/domain/repositories/weather_repository.dart';
+import 'features/domain/usecases/get_current_weather.dart';
+import 'features/presentation/bloc/weather_bloc.dart';
 
 final locator = GetIt.instance;
 

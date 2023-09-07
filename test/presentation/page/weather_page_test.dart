@@ -2,11 +2,11 @@ import 'dart:io';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_tdd_architecture/data/models/weather_model.dart';
-import 'package:flutter_tdd_architecture/presentation/bloc/weather_bloc.dart';
-import 'package:flutter_tdd_architecture/presentation/bloc/weather_event.dart';
-import 'package:flutter_tdd_architecture/presentation/bloc/weather_state.dart';
-import 'package:flutter_tdd_architecture/presentation/page/weather_page.dart';
+import 'package:flutter_tdd_architecture/features/data/models/weather_model.dart';
+import 'package:flutter_tdd_architecture/features/presentation/bloc/weather_bloc.dart';
+import 'package:flutter_tdd_architecture/features/presentation/bloc/weather_event.dart';
+import 'package:flutter_tdd_architecture/features/presentation/bloc/weather_state.dart';
+import 'package:flutter_tdd_architecture/features/presentation/page/weather_page.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 

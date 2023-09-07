@@ -4,7 +4,7 @@ import 'dart:developer';
 import 'package:flutter_tdd_architecture/core/constant/constants.dart';
 import 'package:flutter_tdd_architecture/core/error/exception.dart';
 
-import '../models/weather_model.dart';
+import '../../models/weather_model.dart';
 import 'package:http/http.dart' as http;
 
 abstract class WeatherRemoteDataSource {

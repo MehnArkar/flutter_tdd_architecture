@@ -1,10 +1,6 @@
-
-
-
 import 'dart:convert';
-
-import 'package:flutter_tdd_architecture/data/models/weather_model.dart';
-import 'package:flutter_tdd_architecture/domain/entities/weather.dart';
+import 'package:flutter_tdd_architecture/features/data/models/weather_model.dart';
+import 'package:flutter_tdd_architecture/features/domain/entities/weather.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../helper/json_reader.dart';
