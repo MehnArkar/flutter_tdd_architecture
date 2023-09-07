@@ -5,7 +5,6 @@ import 'package:flutter_tdd_architecture/data/models/weather_model.dart';
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';
 import 'package:http/http.dart' as http;
-
 import '../../helper/json_reader.dart';
 import '../../helper/test_helper.mocks.dart';
 
@@ -43,7 +42,7 @@ void main() {
           });
 
           //act
-          final result = await remoteDataSourceImpl.getCurrentWeather(testCity);
+          final result =   remoteDataSourceImpl.getCurrentWeather(testCity);
 
           //assert
           expect(result, throwsA(isA<ServerException>()));
