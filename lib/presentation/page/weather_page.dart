@@ -15,37 +15,18 @@ class WeatherPage extends StatelessWidget {
         title: const Text('Weather'),
         centerTitle: true,),
       body: Padding(
-          padding: EdgeInsets.all(24),
+          padding: const EdgeInsets.all(24),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextField(
-              textAlign: TextAlign.center,
-              decoration: InputDecoration(
-                hintText: 'Enty city name',
-                filled: true,
-                fillColor: Colors.grey.withOpacity(0.2),
-                focusedBorder:OutlineInputBorder(
-                  borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.circular(10)
-                ),
-                enabledBorder:OutlineInputBorder(
-                    borderSide: BorderSide.none,
-                    borderRadius: BorderRadius.circular(10)
-                ),
-              ),
-              onChanged: (query){
-                context.read<WeatherBloc>().add(OnCityChange(query));
-              },
-            ),
-            const SizedBox(height: 32,),
             BlocBuilder<WeatherBloc,WeatherState>(
                 builder: (context,state){
                   if(state is WeatherLoading){
-                    return CircularProgressIndicator();
+                    return const CircularProgressIndicator();
                   }
                   if(state is WeatherLoaded){
                     return Column(
+                      key: const Key('weather_key'),
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Image.network(Url.weatherIcon(state.result.iconCode)),
@@ -66,11 +47,33 @@ class WeatherPage extends StatelessWidget {
                     return Text(state.message);
                   }
 
-                  return SizedBox();
+                  return const SizedBox();
 
                   // if(state is WeatherLoaded){}
                 }
-            )
+            ),
+            const SizedBox(height: 32,),
+            TextField(
+              textAlign: TextAlign.center,
+              decoration: InputDecoration(
+                hintText: 'Enty city name',
+                filled: true,
+                fillColor: Colors.grey.withOpacity(0.2),
+                focusedBorder:OutlineInputBorder(
+                  borderSide: BorderSide.none,
+                  borderRadius: BorderRadius.circular(10)
+                ),
+                enabledBorder:OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.circular(10)
+                ),
+              ),
+              onChanged: (query){
+                context.read<WeatherBloc>().add(OnCityChange(query));
+              },
+            ),
+
+
           ],
         ),
       ),
